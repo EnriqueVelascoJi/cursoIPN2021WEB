@@ -1,0 +1,306 @@
+
+@media screen and (max-width: 1290px) {
+    .menu-navegacion a {
+        width: 13%;
+        
+    }
+}
+@media screen and (max-width: 1090px) {
+    .menu-navegacion {
+        padding: 40px 0;
+        text-align: center;
+    }
+    .menu-navegacion a{
+        width: 23%;
+        text-align: center;
+    }
+    .menu-navegacion a:last-child {
+        display: none;
+    }
+    .alumnos {
+        justify-content: space-evenly;
+    }
+    .alumno {
+        height: 280px;
+        width: 20%;
+    }
+    .titulo-seccion {
+        font-size: 30px;
+    }
+    h1.resumen-titulo {
+        font-size: 30px;
+        
+    }
+    .resumen-parrafo {
+        font-size: 15px;
+    }
+    #header {
+        width: 100%;
+        background-image: url(../assets/img/header-img2.png);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .presentacion-textos h1 {
+        font-size: 40px;
+    }
+    .descripcion-textos h3 {
+        font-size: 15px;
+    }
+    .acerca-textos p{
+        width: 80%;
+        font-size: 15px;
+    
+    }
+    .contacto:last-child {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 970px) {
+    .menu-navegacion {
+        text-align: right;
+    }
+    .menu-navegacion a{
+        width: 24%;
+        text-align: right;
+        font-size: 13px;
+    }
+    .alumnos {
+        justify-content: space-evenly;
+    }
+    .alumno {
+        height: 280px;
+        width: 27%;
+    }
+    .titulo-seccion {
+        font-size: 20px;
+    }
+    h1.resumen-titulo {
+        font-size: 25px;
+        
+    }
+    .presentacion-textos {
+        margin-bottom: 200px;
+    }
+    .resumen-parrafo {
+        font-size: 12px;
+    }
+    .presentacion-textos h1 {
+        font-size: 30px;
+    }
+    .descripcion-textos h3 {
+        font-size: 12px;
+    }
+    .acerca-textos p{
+        width: 80%;
+        font-size: 12px;
+    
+    }
+    .alumno-info {
+        font-size: 13px;
+        justify-content: flex-start;
+    }
+    
+    .contenedor-estructura {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+        
+    }
+    .apartado {
+        width: 40%;
+        margin-bottom: 30px;
+    }
+    .apartado  p{
+        font-size: 15px;
+    }
+
+    .contactos {
+        width: 50%;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 12px;
+    }
+    
+    .redes-sociales a {
+        display: inline-block;
+        width: 10%;
+        height: 10%;
+    }
+    .redes-sociales a img {
+        width: 100%;
+        height: 100%;
+    }
+
+    
+}
+
+@media screen and (max-width: 600px) {
+    .menu-navegacion {
+        background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+        width: 100%;
+    }
+    .uno {
+        
+        clip-path: circle(0% at 0% 0%);
+        transition: all 2s ease;
+        height: 0vh;
+        
+
+    }
+    .dos {
+        padding-top: 120px;
+        height: 100vh;
+        clip-path: circle(140% at 1% 1%);
+        transition: all 1s ease-in-out;
+        
+
+    }
+    .menu-navegacion a{
+        width: 100%;
+        height: 17%;
+        text-align: center;
+        font-size: 15px;
+        
+    }
+    .menu-navegacion a:last-child {
+        display: inline-block;
+        background: none;
+    
+        
+    }
+    .menu {
+        display: inline-block;
+        z-index: 2;
+    }
+    .alumnos {
+        justify-content: space-evenly;
+    }
+    .alumno {
+        height: 280px;
+        width: 80%;
+    }
+    .alumno-img {
+        width: 100px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .titulo-seccion {
+        font-size: 15px;
+    }
+    h1.resumen-titulo {
+        font-size: 15px;
+        
+    }
+    .presentacion-textos {
+        margin-bottom: 200px;
+    }
+    .resumen-img {
+        order: 2;
+        width: 100%;
+    }
+    .resumen-textos {
+        width: 100%;
+    }
+    .resumen-parrafo {
+        font-size: 10px;
+    }
+    .presentacion-textos h1 {
+        font-size: 19px;
+    }
+    .presentacion-textos a {
+        height: 35px;
+        width: 130px;
+        font-size: 12px;
+    }
+    .descripcion-textos  {
+        width: 100%;
+    }
+    .descripcion-img {
+        width: 100%;
+    }
+    .descripcion-textos h3 {
+        font-size: 10px;
+    }
+    .acerca-textos p{
+        width: 99%;
+        text-align: justify;
+        font-size: 10px;
+    
+    }
+    .alumno-info {
+        font-size: 11px;
+        justify-content: flex-start;
+    }
+    
+    .contenedor-estructura {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+        
+    }
+    .apartado {
+        width: 70%;
+        margin-bottom: 30px;
+    }
+    .apartado  p{
+        font-size: 13px;
+    }
+    .apartado a {
+        font-size: 11px;
+    }
+
+    .contactos {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 10px;
+        text-align: center;
+    }
+    .contacto:last-child {
+        width: 50%;
+    }
+    .contacto-titulo {
+        font-size: 15px;
+    }
+    .redes-sociales {
+        order: 2;
+    }
+    .redes-sociales a {
+        display: inline-block;
+        width: 10%;
+        height: 10%;
+    }
+    .redes-sociales a img {
+        width: 100%;
+        height: 100%;
+    }
+    .copy {
+        font-size: 12px;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+    .formulario *{
+        font-size: 11px;
+    }
+    .formulario *:nth-child(3),
+    .formulario *:nth-child(4) {
+        width: 100%;
+    }
+    .contenedor-formulario .contenedor {
+        padding-bottom: 0;
+    }
+
+    
+}
