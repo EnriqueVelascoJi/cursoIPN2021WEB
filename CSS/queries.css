@@ -148,7 +148,7 @@
     .uno {
 
 
-        transition: all 2s ease;
+        transition: all 1s ease;
         height: 0vh;
         padding: 0;
 
@@ -157,7 +157,7 @@
     .dos {
         padding-top: 120px;
         height: 100vh;
-        transition: all 1s ease-in-out;
+        transition: all 2s ease-in-out;
 
 
     }
