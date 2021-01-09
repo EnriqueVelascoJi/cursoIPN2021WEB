@@ -35,7 +35,6 @@ export const registrarNuevoUsuario = async alumno => {
       school: escuela
     };
 
-    console.log(JSON.stringify(alumnoObj));
     try {
       await fetch(urlAPI, {
         method: "POST",
@@ -43,7 +42,7 @@ export const registrarNuevoUsuario = async alumno => {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(alumnoObj)
-      }).then(response => response.json()).then(result => console.log(result));
+      });
       //Mostrar mensaje de alumno resgistardo
       await Swal.fire({
           icon: 'success',
@@ -58,6 +57,10 @@ export const registrarNuevoUsuario = async alumno => {
 
       camposValidar.forEach( campo => campo.classList.remove("valid"));
     } catch (e) {
-        console.log(e);
+        await Swal.fire({
+            icon: 'error',
+            title: 'Fallo en el registro, intenta de nuevo :(',
+            confirmButtonText: `Corregir`
+          })
     }
 }
