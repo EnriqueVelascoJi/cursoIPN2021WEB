@@ -150,9 +150,7 @@
 
         transition: all 1s ease;
         height: 0vh;
-        margin: 0;
-
-
+        padding: : 0;
     }
     .dos {
         padding-top: 120px;
