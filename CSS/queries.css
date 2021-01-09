@@ -150,7 +150,7 @@
 
         transition: all 1s ease;
         height: 0vh;
-        padding: 0;
+        padding: -1px;
 
 
     }
@@ -198,7 +198,7 @@
 
     }
     .presentacion-textos {
-        margin-bottom: 200px;
+        margin-bottom: 150px;
     }
     .resumen-img {
         order: 2;
