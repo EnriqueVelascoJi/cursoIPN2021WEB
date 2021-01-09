@@ -149,7 +149,8 @@
 
 
         transition: all 2s ease;
-        height: -20vh;
+        height: 0vh;
+        padding: 0;
 
 
     }
