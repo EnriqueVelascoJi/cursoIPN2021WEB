@@ -3,7 +3,7 @@
 const urlAPI = "https://cursoipn2021.herokuapp.com/api/crear/";
 const url = `https://api.allorigins.win/get?url=${ encodeURIComponent(urlAPI)}`;
 const camposValidar = document.querySelectorAll(".validar");
-
+const piePagina = document.querySelector('.pie-pagina');
 
 
 //Obtención de la Cookie
@@ -26,6 +26,17 @@ function getCookie(name) {
 
 export const registrarNuevoUsuario = async alumno => {
 
+    const Spinner = document.createElement('div');
+    Spinner.classList.add('sk-chase');
+    Spinner.innerHTML = `
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    `;
+
     const {nombre, email, telefono, area, escuela } = alumno;
     const alumnoObj = {
       name: nombre,
@@ -34,7 +45,7 @@ export const registrarNuevoUsuario = async alumno => {
       area: area,
       school: escuela
     };
-
+  piePagina.appendChild(Spinner);
     try {
       await fetch(urlAPI, {
         method: "POST",
@@ -42,20 +53,38 @@ export const registrarNuevoUsuario = async alumno => {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(alumnoObj)
-      });
-      //Mostrar mensaje de alumno resgistardo
-      await Swal.fire({
-          icon: 'success',
-          title: 'Tu registro se completó de manera exitosa :)',
-          text: 'En tu correo electrónico se te indicarán los pasos siguientes',
-          confirmButtonText: `Aceptar`
+      }).then(response => {
+        if(response.status !== 404) {
+          //Mostrar mensaje de alumno resgistardo
+          Swal.fire({
+              icon: 'success',
+              title: 'Tu registro se completó de manera exitosa :)',
+              text: 'En tu correo electrónico se te indicarán los pasos siguientes',
+              confirmButtonText: `Aceptar`
+            });
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Fallo en el registro, intenta de nuevo :(',
+            confirmButtonText: `Corregir`
+          })
+        }
+        //Resetear el formulario
+        Spinner.remove();
+        formulario.reset();
+        camposValidar.forEach( campo => campo.classList.remove("valid"));
+      }).catch(err => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Fallo en el registro, intenta de nuevo :(',
+          confirmButtonText: `Corregir`
         })
-
-
+      });
       //Resetear el formulario
+      Spinner.remove();
       formulario.reset();
-
       camposValidar.forEach( campo => campo.classList.remove("valid"));
+
     } catch (e) {
         await Swal.fire({
             icon: 'error',
